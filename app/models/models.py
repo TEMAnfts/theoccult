@@ -41,7 +41,7 @@ class Form(db.Model):
     
 
     id = db.Column(db.Integer, primary_key=True)
-    wallet_address = db.Column(db.String(40), nullable=False, unique=True)
+    wallet_address = db.Column(db.String(64), nullable=False, unique=True)
     last_nft = db.Column(db.String(64))
     why = db.Column(db.String(250))
     twitter = db.Column(db.String(100))
