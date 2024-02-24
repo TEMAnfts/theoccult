@@ -8,6 +8,11 @@ Create Date: 2024-02-23 21:21:36.823416
 from alembic import op
 import sqlalchemy as sa
 
+import os
+environment = os.getenv("FLASK_ENV")
+SCHEMA = os.environ.get("SCHEMA")
+
+
 
 # revision identifiers, used by Alembic.
 revision = '1633529930da'
@@ -28,6 +33,8 @@ def upgrade():
     sa.UniqueConstraint('wallet_address')
     )
     # ### end Alembic commands ###
+    if environment == "production":
+        op.execute(f"ALTER TABLE forms SET SCHEMA {SCHEMA};")
 
 
 def downgrade():
