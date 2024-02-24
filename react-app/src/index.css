@@ -1,6 +1,12 @@
 /* TODO Add site wide styles */
 body {
   margin: 0;
+  /* background-color: #0b0c10; */
+  color: #66fcf1;
+  font-family: "Roboto";
+  background-image: url(./images/forrest.png);
+  background-position: center;
+
 }
 
 button {

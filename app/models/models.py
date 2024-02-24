@@ -33,3 +33,24 @@ class User(db.Model, UserMixin):
         }
 
 
+class Form(db.Model): 
+    __tablename__ = "forms"
+
+    if environment == "production":
+        __table_args__ = {'schema': SCHEMA, 'extend_existing': True}
+    
+
+    id = db.Column(db.Integer, primary_key=True)
+    wallet_address = db.Column(db.String(40), nullable=False, unique=True)
+    last_nft = db.Column(db.String(20))
+    why = db.Column(db.String(250))
+    twitter = db.Column(db.String(100))
+    secret = db.String(db.String(100))
+
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'wallet_address': self.wallet_address,
+            'twitter': self.twitter
+        }
