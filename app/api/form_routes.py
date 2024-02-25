@@ -25,3 +25,16 @@ def new_wallet():
 		return (jsonify(response_data), 200)
 	if form.errors:
 			return jsonify(form.errors), 401
+
+
+@form_routes.route('/wallets', methods=['GET'])
+def get_all_wallets():
+	wallets = Form.query.all()
+
+	if not wallets:
+		return jsonify({"error": "couldn't find wallets"}), 404
+
+	wallet_list = [ {"wallet_address": wallet.wallet_address, "why": wallet.why} for wallet in wallets]
+
+
+	return jsonify(wallet_list), 200
