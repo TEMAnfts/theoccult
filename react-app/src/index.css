@@ -4,9 +4,12 @@ body {
   /* background-color: #0b0c10; */
   color: #66fcf1;
   font-family: "Roboto";
-  background-image: url(./images/seancenewnew.gif);
+  background: url('./images/seancenewnew.gif') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-position: center;
-  background-size: 1150px;
 
 }
 
