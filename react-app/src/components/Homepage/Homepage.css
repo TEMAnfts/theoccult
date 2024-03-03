@@ -5,7 +5,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #0b0c106f;
+	background-color: #0b0c1001;
 	color: #66fcf1;
 	font-size: 22px;
 	text-align: center;
@@ -30,7 +30,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 5px;
-	margin-top: 20px;
+	margin-top: -40px;
 	margin-left: 5px;
 	margin-right: 5px;
 	width: 100px;
@@ -52,6 +52,11 @@
 .main-p-tag {
 	margin-top: -20px;
 	margin-bottom: 0px;
+	width: 800px;
+}
+.main-p-tag-bottom {
+	margin-bottom: 0px;
+	width: 800px;
 }
 
 .link-div {
@@ -63,4 +68,10 @@
 
 .link-div > p {
 	margin: 5px;
+}
+
+.cryptic-code {
+	filter: invert(100%);
+	width: 700px;
+	margin-bottom: 10px;
 }
